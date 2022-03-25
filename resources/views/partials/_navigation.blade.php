@@ -2,14 +2,12 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Clarence Taylor</span>
         <span class="d-none d-lg-block">
-            @if (Auth::user()->profile->photo)
+            
                 
             <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{Storage::url($profile->photo)}}" alt="..." /></span>
                 
                 
-                @else 
-                <img src="https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg" alt="profile_picture">
-                @endif
+               
             </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">

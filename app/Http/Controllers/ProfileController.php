@@ -42,6 +42,7 @@ class ProfileController extends Controller
            $path= Storage::putFile("profile",$req->photo);
            $data=$req->validated();
            $data['photo']=$path;
+           $data['user_id']=Auth::user()->id;
            Profile::create($data);
        }
 
@@ -74,7 +75,11 @@ class ProfileController extends Controller
         $profile->github=$req->github;
         $profile->twitter=$req->twitter;
 
+        
+        
         // in case of user want to set another photo
+       
+       
         if($req->hasFile('photo'))
         {
             Storage::delete('profile',$profile->photo);
